@@ -1,2 +1,9 @@
-# render-shaders
-KAMI clj-wgsl migration Phase 4 home (ADR-2607010930) — scaffold, Wave-2 port lands here
+# kotoba-lang/render-shaders
+
+Kotoba package for `kotoba.render-shaders`.
+
+## Test
+
+```sh
+clojure -M:test
+```
