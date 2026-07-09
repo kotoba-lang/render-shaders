@@ -1,8 +1,12 @@
 (ns kotoba.render-shaders
-  "Open-world shaders as data (kotoba.wgsl EDN AST).
+  "Open-world shaders as data (kami.wgsl EDN AST).
    These shader generators are portable `.cljc` data/code authority; tests feed the generated
-   WGSL to naga when available."
-  (:require [kotoba.wgsl :as w]
+   WGSL to naga when available.
+
+   Depends directly on kotoba-lang/webgpu's kami.wgsl (2026-07-09 dedup — see kotoba-lang/wgsl's
+   CHANGELOG.md for the rationale: kami.wgsl is the canonical WGSL-as-data compiler, kotoba.wgsl is
+   now a thin re-export of it)."
+  (:require [kami.wgsl :as w]
             [clojure.string :as str]))
 
 ;; ── scene_character — procedural humanoid: per-vertex colour, model transform, sun + fog ──────────
