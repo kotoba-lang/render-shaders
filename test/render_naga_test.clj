@@ -1,11 +1,11 @@
 (ns render-naga-test
-  "Gate the naga-validity of every shader generated from kotoba.render-shaders EDN.
+  "Gate the naga-validity of every shader generated from kami.render-shaders EDN.
    The old native WGSL parity gate is retired; this keeps the portable CLJC shader
    authority honest by feeding every generated shader to naga when available."
   (:require [clojure.test :refer [deftest is]]
             [clojure.string :as str]
             [babashka.process :as p]
-            [kotoba.render-shaders :as rs]))
+            [kami.render-shaders :as rs]))
 
 (def shaders
   [["scene_character" rs/scene-character] ["scene_voxel" rs/scene-voxel] ["scene_particle" rs/scene-particle]
@@ -28,5 +28,5 @@
   (if-not (naga?)
     (println "  skip: naga not installed")
     (doseq [[name f] shaders]
-      (is (naga-valid? name (f)) (str name " — kotoba.render-shaders WGSL must be naga-valid")))))
+      (is (naga-valid? name (f)) (str name " — kami.render-shaders WGSL must be naga-valid")))))
 
