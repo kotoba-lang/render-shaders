@@ -3,7 +3,7 @@
    The old native WGSL parity gate is retired; this keeps the portable CLJC shader
    authority honest by feeding every generated shader to naga when available."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [babashka.process :as p]
             [kami.render-shaders :as rs]))
 

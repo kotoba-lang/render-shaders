@@ -5,7 +5,7 @@
    token-equivalent to this source. Ported incrementally, simplest first; each is gated against the
    shipping shader (token-equivalent ⇒ same program ⇒ renders identically). `.cljc`."
   (:require [kami.wgsl :as w]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 ;; ── scene_character — procedural humanoid: per-vertex colour, model transform, sun + fog ──────────
 (def character-U
