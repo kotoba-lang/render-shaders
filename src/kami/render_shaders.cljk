@@ -1,7 +1,7 @@
 (ns kami.render-shaders
   "kami-render's native open-world shaders, as data (kami.wgsl EDN AST). These ship in the native
    Rust renderer (kami-render, used by the kami-app-{game} open-world games); EDN-ifying them makes
-   the shaders forkable data and lets `bb gen-wgsl` + a parity gate keep the committed .wgsl files
+   the shaders forkable data and lets `kbb -M:gen-wgsl` + a parity gate keep the committed .wgsl files
    token-equivalent to this source. Ported incrementally, simplest first; each is gated against the
    shipping shader (token-equivalent ⇒ same program ⇒ renders identically). `.cljc`."
   (:require [kami.wgsl :as w]
