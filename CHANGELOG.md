@@ -8,7 +8,7 @@ Investigated as part of the same dedup pass that fixed real drift in `kotoba-lan
 `kotoba-lang/gpu`, and `kotoba-lang/webgl` (all traced to the abandoned 2026-07-02 "clj-wgsl
 Phase-4" split-migration + independent "restore" commits). Findings:
 
-- **Content**: byte-identical to `kotoba-lang/webgpu`'s `src/kami/render_shaders.cljc` (normalizing
+- **Content**: byte-identical to `kotoba-lang/webgpu`'s `src/kami/render_shaders.cljk` (normalizing
   `kotoba.*`→`kami.*`), except docstring wording.
 - **History**: `kami.render-shaders` received real feature/bugfix work 2026-06-24→25
   (including a fix for `metahuman_skin`'s invalid uniform layout, `a275ba5`). This repo's own
