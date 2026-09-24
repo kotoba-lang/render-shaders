@@ -2,7 +2,7 @@
   "Gate the naga-validity of every shader generated from kami.render-shaders EDN.
    The old native WGSL parity gate is retired; this keeps the portable CLJC shader
    authority honest by feeding every generated shader to naga when available."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
             [babashka.process :as p]
             [kami.render-shaders :as rs]))
